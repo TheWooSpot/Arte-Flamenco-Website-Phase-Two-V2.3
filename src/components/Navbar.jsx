@@ -11,6 +11,17 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  // Touch event handlers for mobile compatibility
+  const handleTouchStart = (e) => {
+    e.preventDefault();
+  };
+
+  const handleTouchEnd = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleMenu();
+  };
+
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
@@ -68,6 +79,8 @@ const Navbar = () => {
           <button
             className="md:hidden text-white focus:outline-none"
             onClick={toggleMenu}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
             aria-label="Toggle menu"
           >
             <svg

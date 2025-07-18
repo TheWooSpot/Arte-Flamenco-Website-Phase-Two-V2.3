@@ -114,11 +114,13 @@ const Home = () => {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <h1 className="text-6xl md:text-8xl font-display font-bold mb-6">
-            <span className="text-flamenco-500">Arte Flamenco</span>
+            <span className="text-white">Arte</span> <span className="text-flamenco-500">Flamenco</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8">
-            Experience the passion, rhythm, and soul of authentic flamenco dance in our studio and performances.
-          </p>
+          <div className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8 space-y-2">
+            <p>Step Into a World Where Dance Speaks the Language of the Soul</p>
+            <p>Immerse Yourself in the Passion, Power, and Poetry of Dance</p>
+            <p>Experience the passion, rhythm, and soul of dance in our studio and performances.</p>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
