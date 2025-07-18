@@ -696,6 +696,24 @@ const Classes = () => {
       {/* Classes Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
+          {/* Classes Found Counter */}
+          <div className="text-center mb-12">
+            <motion.div
+              key={filteredClasses.length}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="inline-block bg-gray-900 rounded-2xl px-8 py-4 border border-flamenco-500/20"
+            >
+              <span className="text-5xl font-display font-bold text-flamenco-500">
+                {filteredClasses.length}
+              </span>
+              <span className="text-2xl font-semibold text-white ml-3">
+                Classes Found
+              </span>
+            </motion.div>
+          </div>
+
           <motion.div
             variants={containerVariants}
             initial="hidden"
