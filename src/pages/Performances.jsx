@@ -79,7 +79,9 @@ const Performances = () => {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <h1 className="text-6xl md:text-8xl font-display font-bold mb-6">
-            <span className="text-flamenco-500">Performances</span> & Events
+            <div className="text-flamenco-500">Performances</div>
+            <div className="text-white">&</div>
+            <div className="text-white">Events</div>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Witness the transformative power of movement through our community showcases, cultural celebrations, and healing arts performances

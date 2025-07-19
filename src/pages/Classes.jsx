@@ -606,7 +606,7 @@ const Classes = () => {
             <span className="text-flamenco-500">Movement</span> for Every Body
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            26 diverse dance and movement classes across four specialized programs designed for healing, empowerment, and artistic expression
+            Diverse dance and movement classes across four specialized programs designed for healing, empowerment, groovy, and artistic expression
           </p>
         </motion.div>
 
