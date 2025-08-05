@@ -51,7 +51,7 @@ const Classes = () => {
         "Stress and trauma processing",
         "Group and individual options"
       ],
-      image: "https://images.pexels.com/photos/3662848/pexels-photo-3662848.jpeg"
+      image: "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg"
     },
     {
       id: 2,
@@ -70,7 +70,7 @@ const Classes = () => {
         "Nervous system regulation",
         "Self-discovery through movement"
       ],
-      image: "https://images.pexels.com/photos/3662850/pexels-photo-3662850.jpeg"
+      image: "https://images.pexels.com/photos/6111619/pexels-photo-6111619.jpeg"
     },
     {
       id: 3,
@@ -89,7 +89,7 @@ const Classes = () => {
         "Community art creation",
         "Therapeutic integration"
       ],
-      image: "https://images.pexels.com/photos/3662851/pexels-photo-3662851.jpeg"
+      image: "https://images.pexels.com/photos/6111483/pexels-photo-6111483.jpeg"
     },
     {
       id: 4,
@@ -108,7 +108,7 @@ const Classes = () => {
         "Nervous system support",
         "Certified trauma-informed instructor"
       ],
-      image: "https://images.pexels.com/photos/3662834/pexels-photo-3662834.jpeg"
+      image: "https://images.pexels.com/photos/6111484/pexels-photo-6111484.jpeg"
     },
     {
       id: 5,
@@ -127,7 +127,7 @@ const Classes = () => {
         "Stress management tools",
         "Accessible for all bodies"
       ],
-      image: "https://images.pexels.com/photos/3662849/pexels-photo-3662849.jpeg"
+      image: "https://images.pexels.com/photos/6111620/pexels-photo-6111620.jpeg"
     },
     {
       id: 6,
@@ -146,7 +146,7 @@ const Classes = () => {
         "Emotional expression",
         "Sacred space holding"
       ],
-      image: "https://images.pexels.com/photos/3662667/pexels-photo-3662667.jpeg"
+      image: "https://images.pexels.com/photos/6111621/pexels-photo-6111621.jpeg"
     },
     {
       id: 7,
