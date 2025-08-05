@@ -127,7 +127,7 @@ const Classes = () => {
         "Stress management tools",
         "Accessible for all bodies"
       ],
-      image: "https://images.pexels.com/photos/6111620/pexels-photo-6111620.jpeg"
+      image: "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg"
     },
     {
       id: 6,
@@ -146,7 +146,7 @@ const Classes = () => {
         "Emotional expression",
         "Sacred space holding"
       ],
-      image: "https://images.pexels.com/photos/6111621/pexels-photo-6111621.jpeg"
+      image: "https://images.pexels.com/photos/8436730/pexels-photo-8436730.jpeg"
     },
     {
       id: 7,
