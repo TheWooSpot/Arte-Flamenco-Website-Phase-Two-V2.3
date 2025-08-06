@@ -165,7 +165,7 @@ const Classes = () => {
         "Sisterhood connection",
         "Body positivity focus"
       ],
-      image: "https://images.pexels.com/photos/3662847/pexels-photo-3662847.jpeg"
+      image: "https://images.pexels.com/photos/6111457/pexels-photo-6111457.jpeg"
     },
     {
       id: 8,
@@ -184,7 +184,7 @@ const Classes = () => {
         "Playful therapeutic approach",
         "Relationship strengthening"
       ],
-      image: "https://images.pexels.com/photos/3662846/pexels-photo-3662846.jpeg"
+      image: "https://images.pexels.com/photos/4473775/pexels-photo-4473775.jpeg"
     },
 
     // Adaptive & Healing Classes
@@ -205,7 +205,7 @@ const Classes = () => {
         "Social connection",
         "Adaptive choreography"
       ],
-      image: "https://images.pexels.com/photos/6173891/pexels-photo-6173891.jpeg"
+      image: "https://images.pexels.com/photos/6111618/pexels-photo-6111618.jpeg"
     },
     {
       id: 10,
@@ -224,7 +224,7 @@ const Classes = () => {
         "Social engagement",
         "Research-backed approach"
       ],
-      image: "https://images.pexels.com/photos/3662845/pexels-photo-3662845.jpeg"
+      image: "https://images.pexels.com/photos/6111620/pexels-photo-6111620.jpeg"
     },
     {
       id: 11,
@@ -243,7 +243,7 @@ const Classes = () => {
         "Nervous system care",
         "Adaptive modifications"
       ],
-      image: "https://images.pexels.com/photos/3662844/pexels-photo-3662844.jpeg"
+      image: "https://images.pexels.com/photos/6111621/pexels-photo-6111621.jpeg"
     },
     {
       id: 12,
@@ -262,7 +262,7 @@ const Classes = () => {
         "Multiple expression modes",
         "Inclusive community"
       ],
-      image: "https://images.pexels.com/photos/3662843/pexels-photo-3662843.jpeg"
+      image: "https://images.pexels.com/photos/6111622/pexels-photo-6111622.jpeg"
     },
 
     // Cultural & Empowering Styles
@@ -283,7 +283,7 @@ const Classes = () => {
         "Community building",
         "Healing through heritage"
       ],
-      image: "https://images.pexels.com/photos/3662842/pexels-photo-3662842.jpeg"
+      image: "https://images.pexels.com/photos/6111623/pexels-photo-6111623.jpeg"
     },
     {
       id: 14,
@@ -302,7 +302,7 @@ const Classes = () => {
         "Spiritual connection",
         "Cultural respect"
       ],
-      image: "https://images.pexels.com/photos/3662841/pexels-photo-3662841.jpeg"
+      image: "https://images.pexels.com/photos/6111624/pexels-photo-6111624.jpeg"
     },
     {
       id: 15,
@@ -321,7 +321,7 @@ const Classes = () => {
         "Passion cultivation",
         "Personal strength building"
       ],
-      image: "https://images.pexels.com/photos/3662840/pexels-photo-3662840.jpeg"
+      image: "https://images.pexels.com/photos/6111625/pexels-photo-6111625.jpeg"
     },
     {
       id: 16,
@@ -340,7 +340,7 @@ const Classes = () => {
         "Cultural appreciation",
         "Joyful expression"
       ],
-      image: "https://images.pexels.com/photos/3662839/pexels-photo-3662839.jpeg"
+      image: "https://images.pexels.com/photos/6111626/pexels-photo-6111626.jpeg"
     },
     {
       id: 17,
@@ -359,7 +359,7 @@ const Classes = () => {
         "Community connection",
         "Fitness benefits"
       ],
-      image: "https://images.pexels.com/photos/3662838/pexels-photo-3662838.jpeg"
+      image: "https://images.pexels.com/photos/6111627/pexels-photo-6111627.jpeg"
     },
 
     // Trending & Technique-Based Classes
@@ -380,7 +380,7 @@ const Classes = () => {
         "Confidence building",
         "Latin tradition"
       ],
-      image: "https://images.pexels.com/photos/3662837/pexels-photo-3662837.jpeg"
+      image: "https://images.pexels.com/photos/6111628/pexels-photo-6111628.jpeg"
     },
     {
       id: 19,
@@ -399,7 +399,7 @@ const Classes = () => {
         "Percussive technique",
         "Performance skills"
       ],
-      image: "https://images.pexels.com/photos/3662836/pexels-photo-3662836.jpeg"
+      image: "https://images.pexels.com/photos/6111629/pexels-photo-6111629.jpeg"
     },
     {
       id: 20,
@@ -418,7 +418,7 @@ const Classes = () => {
         "Posture improvement",
         "Individual adaptations"
       ],
-      image: "https://images.pexels.com/photos/3662835/pexels-photo-3662835.jpeg"
+      image: "https://images.pexels.com/photos/6111630/pexels-photo-6111630.jpeg"
     },
     {
       id: 21,
@@ -437,7 +437,7 @@ const Classes = () => {
         "Artistic expression",
         "Creative exploration"
       ],
-      image: "https://images.pexels.com/photos/3662834/pexels-photo-3662834.jpeg"
+      image: "https://images.pexels.com/photos/6111631/pexels-photo-6111631.jpeg"
     },
     {
       id: 22,
@@ -456,7 +456,7 @@ const Classes = () => {
         "Urban culture connection",
         "Community vibes"
       ],
-      image: "https://images.pexels.com/photos/3662833/pexels-photo-3662833.jpeg"
+      image: "https://images.pexels.com/photos/6111632/pexels-photo-6111632.jpeg"
     },
     {
       id: 23,
@@ -475,7 +475,7 @@ const Classes = () => {
         "Jazz technique",
         "Funk attitude"
       ],
-      image: "https://images.pexels.com/photos/3662832/pexels-photo-3662832.jpeg"
+      image: "https://images.pexels.com/photos/6111633/pexels-photo-6111633.jpeg"
     },
     {
       id: 24,
@@ -494,7 +494,7 @@ const Classes = () => {
         "Fun atmosphere",
         "Social connection"
       ],
-      image: "https://images.pexels.com/photos/3662831/pexels-photo-3662831.jpeg"
+      image: "https://images.pexels.com/photos/6111634/pexels-photo-6111634.jpeg"
     },
     {
       id: 25,
@@ -513,7 +513,7 @@ const Classes = () => {
         "Party atmosphere",
         "Accessible movement"
       ],
-      image: "https://images.pexels.com/photos/3662830/pexels-photo-3662830.jpeg"
+      image: "https://images.pexels.com/photos/6111635/pexels-photo-6111635.jpeg"
     },
     {
       id: 26,
@@ -532,7 +532,7 @@ const Classes = () => {
         "Community support",
         "No choreography required"
       ],
-      image: "https://images.pexels.com/photos/3662829/pexels-photo-3662829.jpeg"
+      image: "https://images.pexels.com/photos/6111636/pexels-photo-6111636.jpeg"
     }
   ];
 
