@@ -70,7 +70,7 @@ const Classes = () => {
         "Nervous system regulation",
         "Self-discovery through movement"
       ],
-      image: "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg"
+      image: "https://images.pexels.com/photos/4498398/pexels-photo-4498398.jpeg"
     },
     {
       id: 3,
@@ -89,7 +89,7 @@ const Classes = () => {
         "Community art creation",
         "Therapeutic integration"
       ],
-      image: "https://images.pexels.com/photos/4498607/pexels-photo-4498607.jpeg"
+      image: "https://images.pexels.com/photos/3662832/pexels-photo-3662832.jpeg"
     },
     {
       id: 4,
@@ -108,7 +108,7 @@ const Classes = () => {
         "Nervous system support",
         "Certified trauma-informed instructor"
       ],
-      image: "https://images.pexels.com/photos/4498608/pexels-photo-4498608.jpeg"
+      image: "https://images.pexels.com/photos/3662834/pexels-photo-3662834.jpeg"
     },
     {
       id: 5,
@@ -127,7 +127,7 @@ const Classes = () => {
         "Stress management tools",
         "Accessible for all bodies"
       ],
-      image: "https://images.pexels.com/photos/4498609/pexels-photo-4498609.jpeg"
+      image: "https://images.pexels.com/photos/3662835/pexels-photo-3662835.jpeg"
     },
     {
       id: 6,
@@ -146,7 +146,7 @@ const Classes = () => {
         "Emotional expression",
         "Sacred space holding"
       ],
-      image: "https://images.pexels.com/photos/4498610/pexels-photo-4498610.jpeg"
+      image: "https://images.pexels.com/photos/3662836/pexels-photo-3662836.jpeg"
     },
     {
       id: 7,
@@ -165,7 +165,7 @@ const Classes = () => {
         "Sisterhood connection",
         "Body positivity focus"
       ],
-      image: "https://images.pexels.com/photos/4498611/pexels-photo-4498611.jpeg"
+      image: "https://images.pexels.com/photos/3662837/pexels-photo-3662837.jpeg"
     },
     {
       id: 8,
@@ -184,7 +184,7 @@ const Classes = () => {
         "Playful therapeutic approach",
         "Relationship strengthening"
       ],
-      image: "https://images.pexels.com/photos/4498612/pexels-photo-4498612.jpeg"
+      image: "https://images.pexels.com/photos/3662838/pexels-photo-3662838.jpeg"
     },
 
     // Adaptive & Healing Classes
@@ -205,7 +205,7 @@ const Classes = () => {
         "Social connection",
         "Adaptive choreography"
       ],
-      image: "https://images.pexels.com/photos/4498613/pexels-photo-4498613.jpeg"
+      image: "https://images.pexels.com/photos/3662839/pexels-photo-3662839.jpeg"
     },
     {
       id: 10,
@@ -224,7 +224,7 @@ const Classes = () => {
         "Social engagement",
         "Research-backed approach"
       ],
-      image: "https://images.pexels.com/photos/4498614/pexels-photo-4498614.jpeg"
+      image: "https://images.pexels.com/photos/3662840/pexels-photo-3662840.jpeg"
     },
     {
       id: 11,
@@ -243,7 +243,7 @@ const Classes = () => {
         "Nervous system care",
         "Adaptive modifications"
       ],
-      image: "https://images.pexels.com/photos/4498615/pexels-photo-4498615.jpeg"
+      image: "https://images.pexels.com/photos/3662841/pexels-photo-3662841.jpeg"
     },
     {
       id: 12,
@@ -262,7 +262,7 @@ const Classes = () => {
         "Multiple expression modes",
         "Inclusive community"
       ],
-      image: "https://images.pexels.com/photos/4498616/pexels-photo-4498616.jpeg"
+      image: "https://images.pexels.com/photos/3662842/pexels-photo-3662842.jpeg"
     },
 
     // Cultural & Empowering Styles
@@ -283,7 +283,7 @@ const Classes = () => {
         "Community building",
         "Healing through heritage"
       ],
-      image: "https://images.pexels.com/photos/4498617/pexels-photo-4498617.jpeg"
+      image: "https://images.pexels.com/photos/3662843/pexels-photo-3662843.jpeg"
     },
     {
       id: 14,
@@ -302,7 +302,7 @@ const Classes = () => {
         "Spiritual connection",
         "Cultural respect"
       ],
-      image: "https://images.pexels.com/photos/4498618/pexels-photo-4498618.jpeg"
+      image: "https://images.pexels.com/photos/3662844/pexels-photo-3662844.jpeg"
     },
     {
       id: 15,
@@ -321,7 +321,7 @@ const Classes = () => {
         "Passion cultivation",
         "Personal strength building"
       ],
-      image: "https://images.pexels.com/photos/4498619/pexels-photo-4498619.jpeg"
+      image: "https://images.pexels.com/photos/3662845/pexels-photo-3662845.jpeg"
     },
     {
       id: 16,
@@ -340,7 +340,7 @@ const Classes = () => {
         "Cultural appreciation",
         "Joyful expression"
       ],
-      image: "https://images.pexels.com/photos/4498620/pexels-photo-4498620.jpeg"
+      image: "https://images.pexels.com/photos/3662846/pexels-photo-3662846.jpeg"
     },
     {
       id: 17,
@@ -359,7 +359,7 @@ const Classes = () => {
         "Community connection",
         "Fitness benefits"
       ],
-      image: "https://images.pexels.com/photos/4498621/pexels-photo-4498621.jpeg"
+      image: "https://images.pexels.com/photos/3662847/pexels-photo-3662847.jpeg"
     },
 
     // Trending & Technique-Based Classes
@@ -380,7 +380,7 @@ const Classes = () => {
         "Confidence building",
         "Latin tradition"
       ],
-      image: "https://images.pexels.com/photos/4498622/pexels-photo-4498622.jpeg"
+      image: "https://images.pexels.com/photos/6173891/pexels-photo-6173891.jpeg"
     },
     {
       id: 19,
@@ -399,7 +399,7 @@ const Classes = () => {
         "Percussive technique",
         "Performance skills"
       ],
-      image: "https://images.pexels.com/photos/4498623/pexels-photo-4498623.jpeg"
+      image: "https://images.pexels.com/photos/4498398/pexels-photo-4498398.jpeg"
     },
     {
       id: 20,
@@ -418,7 +418,7 @@ const Classes = () => {
         "Posture improvement",
         "Individual adaptations"
       ],
-      image: "https://images.pexels.com/photos/4498624/pexels-photo-4498624.jpeg"
+      image: "https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg"
     },
     {
       id: 21,
@@ -437,7 +437,7 @@ const Classes = () => {
         "Artistic expression",
         "Creative exploration"
       ],
-      image: "https://images.pexels.com/photos/4498625/pexels-photo-4498625.jpeg"
+      image: "https://images.pexels.com/photos/4498607/pexels-photo-4498607.jpeg"
     },
     {
       id: 22,
@@ -456,7 +456,7 @@ const Classes = () => {
         "Urban culture connection",
         "Community vibes"
       ],
-      image: "https://images.pexels.com/photos/4498626/pexels-photo-4498626.jpeg"
+      image: "https://images.pexels.com/photos/4498608/pexels-photo-4498608.jpeg"
     },
     {
       id: 23,
@@ -475,7 +475,7 @@ const Classes = () => {
         "Jazz technique",
         "Funk attitude"
       ],
-      image: "https://images.pexels.com/photos/4498627/pexels-photo-4498627.jpeg"
+      image: "https://images.pexels.com/photos/4498609/pexels-photo-4498609.jpeg"
     },
     {
       id: 24,
@@ -494,7 +494,7 @@ const Classes = () => {
         "Fun atmosphere",
         "Social connection"
       ],
-      image: "https://images.pexels.com/photos/4498628/pexels-photo-4498628.jpeg"
+      image: "https://images.pexels.com/photos/4498610/pexels-photo-4498610.jpeg"
     },
     {
       id: 25,
@@ -513,7 +513,7 @@ const Classes = () => {
         "Party atmosphere",
         "Accessible movement"
       ],
-      image: "https://images.pexels.com/photos/4498629/pexels-photo-4498629.jpeg"
+      image: "https://images.pexels.com/photos/4498611/pexels-photo-4498611.jpeg"
     },
     {
       id: 26,
@@ -532,7 +532,7 @@ const Classes = () => {
         "Community support",
         "No choreography required"
       ],
-      image: "https://images.pexels.com/photos/4498630/pexels-photo-4498630.jpeg"
+      image: "https://images.pexels.com/photos/4498612/pexels-photo-4498612.jpeg"
     }
   ];
 
