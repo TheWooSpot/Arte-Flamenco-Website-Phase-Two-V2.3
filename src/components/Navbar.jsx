@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import AdminLogin from './AdminLogin';
+import AdminDashboard from './AdminDashboard';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showAdminLogin, setShowAdminLogin] = useState(false);
+  const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -51,8 +55,23 @@ const Navbar = () => {
     { name: 'Shop', path: '/shop' },
   ];
 
+  const handleAdminLogin = () => {
+    setIsAdminLoggedIn(true);
+    setShowAdminLogin(false);
+  };
+
+  const handleAdminLogout = () => {
+    setIsAdminLoggedIn(false);
+  };
+
+  // If admin is logged in, show the dashboard instead of the regular site
+  if (isAdminLoggedIn) {
+    return <AdminDashboard onLogout={handleAdminLogout} />;
+  }
+
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md py-2' : 'bg-transparent py-4'}`}>
+    <>
+      <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-2xl font-display font-bold text-white">
@@ -60,7 +79,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -73,6 +92,12 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            <button
+              onClick={() => setShowAdminLogin(true)}
+              className="ml-4 px-4 py-2 bg-flamenco-500 hover:bg-flamenco-600 text-black font-medium rounded-lg transition-colors duration-300 text-sm"
+            >
+              Admin
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -134,12 +159,30 @@ const Navbar = () => {
                     {link.name}
                   </Link>
                 ))}
+                <button
+                  onClick={() => {
+                    setShowAdminLogin(true);
+                    setIsOpen(false);
+                  }}
+                  className="mt-4 px-4 py-2 bg-flamenco-500 hover:bg-flamenco-600 text-black font-medium rounded-lg transition-colors duration-300 text-sm"
+                >
+                  Admin Login
+                </button>
               </nav>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+      </header>
+
+      {/* Admin Login Modal */}
+      {showAdminLogin && (
+        <AdminLogin 
+          onLogin={handleAdminLogin}
+          onClose={() => setShowAdminLogin(false)}
+        />
+      )}
+    </>
   );
 };
 
