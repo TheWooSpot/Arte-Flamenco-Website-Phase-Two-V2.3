@@ -3,12 +3,16 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import AdminLogin from './AdminLogin';
 import AdminDashboard from './AdminDashboard';
+import MemberAuth from './MemberAuth';
+import MemberDashboard from '../pages/MemberDashboard';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showAdminLogin, setShowAdminLogin] = useState(false);
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
+  const [showMemberAuth, setShowMemberAuth] = useState(false);
+  const [memberUser, setMemberUser] = useState(null);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -64,9 +68,23 @@ const Navbar = () => {
     setIsAdminLoggedIn(false);
   };
 
+  const handleMemberLogin = (user) => {
+    setMemberUser(user);
+    setShowMemberAuth(false);
+  };
+
+  const handleMemberLogout = () => {
+    setMemberUser(null);
+  };
+
   // If admin is logged in, show the dashboard instead of the regular site
   if (isAdminLoggedIn) {
     return <AdminDashboard onLogout={handleAdminLogout} />;
+  }
+
+  // If member is logged in, show the member dashboard
+  if (memberUser) {
+    return <MemberDashboard user={memberUser} onLogout={handleMemberLogout} />;
   }
 
   return (
@@ -97,6 +115,12 @@ const Navbar = () => {
               className="ml-4 px-4 py-2 bg-flamenco-500 hover:bg-flamenco-600 text-black font-medium rounded-lg transition-colors duration-300 text-sm"
             >
               Admin
+            </button>
+            <button
+              onClick={() => setShowMemberAuth(true)}
+              className="ml-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 text-sm"
+            >
+              Member Login
             </button>
           </nav>
 
@@ -168,6 +192,15 @@ const Navbar = () => {
                 >
                   Admin Login
                 </button>
+                <button
+                  onClick={() => {
+                    setShowMemberAuth(true);
+                    setIsOpen(false);
+                  }}
+                  className="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 text-sm"
+                >
+                  Member Login
+                </button>
               </nav>
             </div>
           </motion.div>
@@ -180,6 +213,14 @@ const Navbar = () => {
         <AdminLogin 
           onLogin={handleAdminLogin}
           onClose={() => setShowAdminLogin(false)}
+        />
+      )}
+
+      {/* Member Auth Modal */}
+      {showMemberAuth && (
+        <MemberAuth 
+          onLogin={handleMemberLogin}
+          onClose={() => setShowMemberAuth(false)}
         />
       )}
     </>

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Classes = () => {
+const Classes = ({ memberUser }) => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [skillFilter, setSkillFilter] = useState('all');
   const [dayFilter, setDayFilter] = useState('all');
+  const [enrollmentRequests, setEnrollmentRequests] = useState([]);
 
   const categories = [
     { id: 'all', name: 'All Classes', icon: '🌟', color: 'bg-flamenco-500' },
@@ -561,6 +562,21 @@ const Classes = () => {
     return dayObj ? dayObj.color : 'bg-gray-500';
   };
 
+  const handleEnrollmentRequest = (classId) => {
+    if (!memberUser) {
+      alert('Please log in to request enrollment');
+      return;
+    }
+    
+    if (enrollmentRequests.includes(classId)) {
+      alert('You have already requested enrollment for this class');
+      return;
+    }
+    
+    setEnrollmentRequests([...enrollmentRequests, classId]);
+    alert('Enrollment request submitted! You will receive confirmation within 24 hours.');
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -842,8 +858,14 @@ const Classes = () => {
               <button className="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
                 Schedule a Consultation
               </button>
-              <button className="border-2 border-black text-black px-8 py-4 rounded-lg font-semibold hover:bg-black hover:text-white transition-colors">
-                Contact Us
+              <button 
+                onClick={() => handleEnrollmentRequest(classItem.id)}
+                className={`w-full ${getCategoryColor(classItem.category)} hover:opacity-80 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 ${
+                  enrollmentRequests.includes(classItem.id) ? 'opacity-50 cursor-not-allowed' : ''
+                }`}
+                disabled={enrollmentRequests.includes(classItem.id)}
+              >
+                {enrollmentRequests.includes(classItem.id) ? 'Request Submitted' : 'Request Enrollment'}
               </button>
             </div>
           </motion.div>
