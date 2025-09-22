@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 
 const Classes = ({ memberUser }) => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -859,12 +858,9 @@ const Classes = ({ memberUser }) => {
               <button className="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
                 Schedule a Consultation
               </button>
-              <Link 
-                to="/classes"
-                className="bg-flamenco-500 hover:bg-flamenco-600 text-black font-semibold px-8 py-4 rounded-lg transition-colors text-center"
-              >
-                Browse All Classes
-              </Link>
+              <button className="bg-flamenco-500 hover:bg-flamenco-600 text-black font-semibold px-8 py-4 rounded-lg transition-colors">
+                Contact Us
+              </button>
             </div>
           </motion.div>
         </div>
