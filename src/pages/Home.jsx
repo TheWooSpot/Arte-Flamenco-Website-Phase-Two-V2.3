@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import useInterval from '../hooks/useInterval';
 
 const Home = () => {
   const [currentStory, setCurrentStory] = useState(0);
@@ -78,13 +79,10 @@ const Home = () => {
     }
   ];
 
-  // Auto-advance carousel
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentStory((prev) => (prev + 1) % transformationStories.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+  // Auto-advance carousel using custom hook
+  useInterval(() => {
+    setCurrentStory((prev) => (prev + 1) % transformationStories.length);
+  }, 5000);
 
   const nextStory = () => {
     setCurrentStory((prev) => (prev + 1) % transformationStories.length);
