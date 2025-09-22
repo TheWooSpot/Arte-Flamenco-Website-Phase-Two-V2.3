@@ -57,7 +57,7 @@ const MemberAuth = ({ onLogin, onClose, preselectedClass }) => {
           workshopsCompleted: 0,
           upcomingSessions: 0,
           hoursDanced: 0,
-          enrolledClasses: []
+          enrolledClasses: preselectedClass ? [{ ...preselectedClass, status: 'pending' }] : []
         };
         onLogin(newUser);
       }

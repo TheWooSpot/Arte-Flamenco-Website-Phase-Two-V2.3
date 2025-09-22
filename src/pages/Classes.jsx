@@ -567,6 +567,8 @@ const Classes = ({ memberUser, onShowMemberAuth, onPreselectedClass }) => {
       // Find the class and store it for enrollment after login
       const selectedClass = classes.find(c => c.id === classId);
       if (selectedClass) {
+        // Add the class with pending status immediately
+        const updatedClass = { ...selectedClass, status: 'pending' };
         onPreselectedClass(selectedClass);
         onShowMemberAuth(true);
       }

@@ -77,7 +77,7 @@ const Navbar = () => {
     if (preselectedClassForEnrollment) {
       const updatedUser = {
         ...user,
-        enrolledClasses: [...(user.enrolledClasses || []), preselectedClassForEnrollment.id]
+        enrolledClasses: [...(user.enrolledClasses || []), { ...preselectedClassForEnrollment, status: 'pending' }]
       };
       setMemberUser(updatedUser);
       setPreselectedClassForEnrollment(null);

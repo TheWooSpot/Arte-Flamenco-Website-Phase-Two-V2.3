@@ -112,6 +112,20 @@ const MemberDashboard = ({ user, onLogout, onUserUpdate }) => {
     }
   ];
 
+  // Add user's enrolled classes with pending status to the display
+  const allEnrolledClasses = [
+    ...enrolledClasses,
+    ...(user.enrolledClasses || []).map(classItem => ({
+      id: classItem.id,
+      name: classItem.title,
+      instructor: 'Clarita Corona',
+      date: 'TBD',
+      time: classItem.schedule?.split(' ').slice(-2).join(' ') || 'TBD',
+      status: classItem.status || 'pending',
+      image: classItem.image || 'https://images.pexels.com/photos/3662851/pexels-photo-3662851.jpeg'
+    }))
+  ];
+
   const recentActivity = [
     {
       id: 1,
@@ -257,7 +271,7 @@ const MemberDashboard = ({ user, onLogout, onUserUpdate }) => {
         <motion.div variants={itemVariants} className="bg-gray-900 rounded-2xl p-6">
           <h3 className="text-xl font-display font-bold text-flamenco-400 mb-6">Upcoming Workshops</h3>
           <div className="space-y-4">
-            {enrolledClasses.slice(0, 2).map((classItem) => (
+            {allEnrolledClasses.slice(0, 3).map((classItem) => (
               <div key={classItem.id} className="bg-gray-800 rounded-lg p-4">
                 <div className="flex items-center gap-4">
                   <img
@@ -315,7 +329,7 @@ const MemberDashboard = ({ user, onLogout, onUserUpdate }) => {
       <h2 className="text-3xl font-display font-bold text-white">My Schedule</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {enrolledClasses.map((classItem) => (
+        {allEnrolledClasses.map((classItem) => (
           <div key={classItem.id} className="bg-gray-900 rounded-2xl overflow-hidden">
             <div className="aspect-video overflow-hidden">
               <img
