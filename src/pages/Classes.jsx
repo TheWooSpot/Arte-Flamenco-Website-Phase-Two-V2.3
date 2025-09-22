@@ -858,8 +858,14 @@ const Classes = ({ memberUser }) => {
               <button className="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
                 Schedule a Consultation
               </button>
-              <button className="bg-flamenco-500 hover:bg-flamenco-600 text-black font-semibold px-8 py-4 rounded-lg transition-colors">
-                Contact Us
+              <button 
+                onClick={() => handleEnrollmentRequest(classItem.id)}
+                className={`w-full ${getCategoryColor(classItem.category)} hover:opacity-80 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 ${
+                  enrollmentRequests.includes(classItem.id) ? 'opacity-50 cursor-not-allowed' : ''
+                }`}
+                disabled={enrollmentRequests.includes(classItem.id)}
+              >
+                {enrollmentRequests.includes(classItem.id) ? 'Request Submitted' : 'Request Enrollment'}
               </button>
             </div>
           </motion.div>
