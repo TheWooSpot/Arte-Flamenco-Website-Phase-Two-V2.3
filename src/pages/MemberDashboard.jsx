@@ -1,9 +1,85 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import MemberClassSelection from '../components/MemberClassSelection';
 
-const MemberDashboard = ({ user, onLogout }) => {
+const MemberDashboard = ({ user, onLogout, onUserUpdate }) => {
   const [activeTab, setActiveTab] = useState('dashboard');
+  const [showClassSelection, setShowClassSelection] = useState(false);
+
+  // Mock classes data (same as in Classes.jsx)
+  const classes = [
+    {
+      id: 1,
+      title: "Dance/Movement Therapy (DMT)",
+      category: "therapeutic",
+      skillLevels: ["beginner", "intermediate", "advanced"],
+      days: ["tuesday", "thursday"],
+      duration: "75 minutes",
+      price: "$40 per session",
+      schedule: "Tuesdays & Thursdays 6:00 PM",
+      description: "Evidence-based therapeutic approach using movement and dance to promote emotional, cognitive, physical, and social integration.",
+      image: "https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg"
+    },
+    {
+      id: 2,
+      title: "Somatic Movement Exploration",
+      category: "therapeutic",
+      skillLevels: ["beginner", "intermediate"],
+      days: ["wednesday", "saturday"],
+      duration: "60 minutes",
+      price: "$35 per class",
+      schedule: "Wednesdays & Saturdays 7:00 PM",
+      description: "Gentle, mindful movement practices that help you reconnect with your body's natural wisdom.",
+      image: "https://images.pexels.com/photos/4498398/pexels-photo-4498398.jpeg"
+    },
+    {
+      id: 3,
+      title: "Flamenco for Emotional Empowerment",
+      category: "cultural",
+      skillLevels: ["intermediate", "advanced"],
+      days: ["tuesday", "thursday"],
+      duration: "75 minutes",
+      price: "$40 per class",
+      schedule: "Tuesdays & Thursdays 7:30 PM",
+      description: "Traditional flamenco techniques combined with emotional empowerment practices.",
+      image: "https://images.pexels.com/photos/3662845/pexels-photo-3662845.jpeg"
+    },
+    {
+      id: 4,
+      title: "Chair-Based Dance",
+      category: "adaptive",
+      skillLevels: ["beginner", "intermediate"],
+      days: ["tuesday", "friday"],
+      duration: "45 minutes",
+      price: "$25 per class",
+      schedule: "Tuesdays & Fridays 10:00 AM",
+      description: "Joyful, energizing dance classes designed for those who use wheelchairs or prefer seated movement.",
+      image: "https://images.pexels.com/photos/3662839/pexels-photo-3662839.jpeg"
+    },
+    {
+      id: 5,
+      title: "Hip-Hop Therapy",
+      category: "trending",
+      skillLevels: ["beginner", "intermediate", "advanced"],
+      days: ["wednesday"],
+      duration: "60 minutes",
+      price: "$30 per class",
+      schedule: "Wednesdays 6:00 PM",
+      description: "High-energy hip-hop combined with therapeutic principles.",
+      image: "https://images.pexels.com/photos/4498608/pexels-photo-4498608.jpeg"
+    }
+  ];
+
+  // Handle enrollment updates from class selection
+  const handleEnrollmentUpdate = (newEnrollments) => {
+    const updatedUser = {
+      ...user,
+      enrolledClasses: [...(user.enrolledClasses || []), ...newEnrollments],
+      upcomingSessions: (user.upcomingSessions || 0) + newEnrollments.length
+    };
+    onUserUpdate(updatedUser);
+  };
 
   // Mock data for enrolled classes
   const enrolledClasses = [
@@ -127,12 +203,12 @@ const MemberDashboard = ({ user, onLogout }) => {
       <motion.div variants={itemVariants} className="bg-gray-900 rounded-2xl p-6">
         <h2 className="text-2xl font-display font-bold text-flamenco-400 mb-6">Quick Actions</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Link
-            to="/classes"
+          <button
+            onClick={() => setShowClassSelection(true)}
             className="bg-flamenco-500 hover:bg-flamenco-600 text-black font-semibold py-4 px-6 rounded-lg transition-colors duration-300 text-center"
           >
             Browse Classes
-          </Link>
+          </button>
           <button
             onClick={() => setActiveTab('schedule')}
             className="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 border border-flamenco-500/20"
@@ -506,6 +582,16 @@ const MemberDashboard = ({ user, onLogout }) => {
         {activeTab === 'payments' && renderPayments()}
         {activeTab === 'profile' && renderProfile()}
       </main>
+
+      {/* Class Selection Modal */}
+      {showClassSelection && (
+        <MemberClassSelection
+          classes={classes}
+          memberUser={user}
+          onEnrollmentUpdate={handleEnrollmentUpdate}
+          onClose={() => setShowClassSelection(false)}
+        />
+      )}
     </div>
   );
 };
