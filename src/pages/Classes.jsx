@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Classes = ({ memberUser }) => {
+const Classes = ({ memberUser, onShowMemberAuth, onPreselectedClass }) => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [skillFilter, setSkillFilter] = useState('all');
   const [dayFilter, setDayFilter] = useState('all');
@@ -564,11 +564,16 @@ const Classes = ({ memberUser }) => {
 
   const handleEnrollmentRequest = (classId) => {
     if (!memberUser) {
-      alert('Please log in to request enrollment');
+      // Find the class and store it for enrollment after login
+      const selectedClass = classes.find(c => c.id === classId);
+      if (selectedClass) {
+        onPreselectedClass(selectedClass);
+        onShowMemberAuth(true);
+      }
       return;
     }
     
-    if (enrollmentRequests.includes(classId)) {
+    if (memberUser.enrolledClasses?.includes(classId) || enrollmentRequests.includes(classId)) {
       alert('You have already requested enrollment for this class');
       return;
     }
@@ -814,7 +819,12 @@ const Classes = ({ memberUser }) => {
                   </div>
                   
                   <button className={`w-full ${getCategoryColor(classItem.category)} hover:opacity-80 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300`}>
-                    Book This Class
+                    {memberUser?.enrolledClasses?.includes(classItem.id) 
+                      ? 'Enrolled' 
+                      : enrollmentRequests.includes(classItem.id)
+                      ? 'Request Pending'
+                      : 'Book This Class'
+                    }
                   </button>
                 </div>
               </motion.div>

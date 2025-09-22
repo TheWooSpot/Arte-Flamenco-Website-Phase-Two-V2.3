@@ -13,6 +13,7 @@ const Navbar = () => {
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
   const [showMemberAuth, setShowMemberAuth] = useState(false);
   const [memberUser, setMemberUser] = useState(null);
+  const [preselectedClassForEnrollment, setPreselectedClassForEnrollment] = useState(null);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -71,6 +72,16 @@ const Navbar = () => {
   const handleMemberLogin = (user) => {
     setMemberUser(user);
     setShowMemberAuth(false);
+    
+    // If there's a preselected class, add it to the user's enrolled classes
+    if (preselectedClassForEnrollment) {
+      const updatedUser = {
+        ...user,
+        enrolledClasses: [...(user.enrolledClasses || []), preselectedClassForEnrollment.id]
+      };
+      setMemberUser(updatedUser);
+      setPreselectedClassForEnrollment(null);
+    }
   };
 
   const handleMemberLogout = () => {
@@ -84,7 +95,7 @@ const Navbar = () => {
 
   // If member is logged in, show the member dashboard
   if (memberUser) {
-    return <MemberDashboard user={memberUser} onLogout={handleMemberLogout} />;
+    return <MemberDashboard user={memberUser} onLogout={handleMemberLogout} onUserUpdate={setMemberUser} />;
   }
 
   return (
@@ -221,6 +232,7 @@ const Navbar = () => {
         <MemberAuth 
           onLogin={handleMemberLogin}
           onClose={() => setShowMemberAuth(false)}
+          preselectedClass={preselectedClassForEnrollment}
         />
       )}
     </>

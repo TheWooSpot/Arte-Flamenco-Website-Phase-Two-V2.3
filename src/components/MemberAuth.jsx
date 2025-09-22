@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const MemberAuth = ({ onLogin, onClose }) => {
+const MemberAuth = ({ onLogin, onClose, preselectedClass }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     email: '',
@@ -37,7 +37,8 @@ const MemberAuth = ({ onLogin, onClose }) => {
             joinDate: '2024-01-15',
             workshopsCompleted: 12,
             upcomingSessions: 3,
-            hoursDanced: 45
+            hoursDanced: 45,
+            enrolledClasses: []
           };
           onLogin(mockUser);
         } else {
@@ -55,7 +56,8 @@ const MemberAuth = ({ onLogin, onClose }) => {
           joinDate: new Date().toISOString().split('T')[0],
           workshopsCompleted: 0,
           upcomingSessions: 0,
-          hoursDanced: 0
+          hoursDanced: 0,
+          enrolledClasses: []
         };
         onLogin(newUser);
       }
@@ -90,6 +92,11 @@ const MemberAuth = ({ onLogin, onClose }) => {
           <h2 className="text-3xl font-display font-bold text-white">
             {isLogin ? 'Member Login' : 'Join Arte Flamenco'}
           </h2>
+          {preselectedClass && (
+            <div className="text-flamenco-400 text-sm">
+              You'll be enrolled in: {preselectedClass.title}
+            </div>
+          )}
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-white transition-colors"
