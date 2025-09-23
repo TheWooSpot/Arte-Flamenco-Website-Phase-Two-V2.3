@@ -14,7 +14,6 @@ function App() {
   const location = useLocation();
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [cursorVisible, setCursorVisible] = useState(false);
-  const [memberUser, setMemberUser] = useState(null);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -51,7 +50,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
-            <Route path="classes" element={<Classes memberUser={memberUser} />} />
+            <Route path="classes" element={<Classes />} />
             <Route path="performances" element={<Performances />} />
             <Route path="gallery" element={<Gallery />} />
             <Route path="contact" element={<Contact />} />
