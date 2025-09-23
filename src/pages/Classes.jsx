@@ -820,7 +820,6 @@ const Classes = ({ memberUser, onShowMemberAuth, onPreselectedClass }) => {
                     </ul>
                   </div>
                   
-                  <button className={`w-full ${getCategoryColor(classItem.category)} hover:opacity-80 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300`}>
                   <button 
                     onClick={() => handleEnrollmentRequest(classItem.id)}
                     className={`w-full ${getCategoryColor(classItem.category)} hover:opacity-80 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300`}
