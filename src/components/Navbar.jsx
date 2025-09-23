@@ -5,6 +5,7 @@ import AdminLogin from './AdminLogin';
 import AdminDashboard from './AdminDashboard';
 import MemberAuth from './MemberAuth';
 import MemberDashboard from '../pages/MemberDashboard';
+import Classes from '../pages/Classes';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -96,6 +97,155 @@ const Navbar = () => {
   // If member is logged in, show the member dashboard
   if (memberUser) {
     return <MemberDashboard user={memberUser} onLogout={handleMemberLogout} onUserUpdate={setMemberUser} />;
+  }
+
+  // If we're on the classes page, render it with the necessary props
+  if (location.pathname === '/classes') {
+    return (
+      <>
+        <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md py-2' : 'bg-transparent py-4'}`}>
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex justify-between items-center">
+              <Link to="/" className="text-2xl font-display font-bold text-white">
+                <span className="text-flamenco-600">Arte</span> Flamenco
+              </Link>
+
+              {/* Desktop Navigation */}
+              <nav className="hidden md:flex space-x-8 items-center">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className={`text-sm uppercase tracking-wider hover:text-flamenco-500 transition-colors ${
+                      location.pathname === link.path ? 'text-flamenco-500' : 'text-white'
+                    }`}
+                    style={{ fontSize: '0.945rem' }}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+                <button
+                  onClick={() => setShowAdminLogin(true)}
+                  className="ml-4 px-4 py-2 bg-flamenco-500 hover:bg-flamenco-600 text-black font-medium rounded-lg transition-colors duration-300 text-sm"
+                >
+                  Admin
+                </button>
+                <button
+                  onClick={() => setShowMemberAuth(true)}
+                  className="ml-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 text-sm"
+                >
+                  Member Login
+                </button>
+              </nav>
+
+              {/* Mobile Menu Button */}
+              <button
+                className="md:hidden text-white focus:outline-none"
+                onClick={toggleMenu}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+                aria-label="Toggle menu"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {isOpen ? (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  ) : (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  )}
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Menu */}
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="md:hidden bg-black/95 backdrop-blur-md"
+              >
+                <div className="container mx-auto px-4 py-4">
+                  <nav className="flex flex-col space-y-4">
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.path}
+                        className={`text-sm uppercase tracking-wider hover:text-flamenco-500 transition-colors ${
+                          location.pathname === link.path ? 'text-flamenco-500' : 'text-white'
+                        }`}
+                        style={{ fontSize: '0.945rem' }}
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                    <button
+                      onClick={() => {
+                        setShowAdminLogin(true);
+                        setIsOpen(false);
+                      }}
+                      className="mt-4 px-4 py-2 bg-flamenco-500 hover:bg-flamenco-600 text-black font-medium rounded-lg transition-colors duration-300 text-sm"
+                    >
+                      Admin Login
+                    </button>
+                    <button
+                      onClick={() => {
+                        setShowMemberAuth(true);
+                        setIsOpen(false);
+                      }}
+                      className="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 text-sm"
+                    >
+                      Member Login
+                    </button>
+                  </nav>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </header>
+
+        <Classes 
+          memberUser={memberUser} 
+          onShowMemberAuth={setShowMemberAuth} 
+          onPreselectedClass={setPreselectedClassForEnrollment} 
+        />
+
+        {/* Admin Login Modal */}
+        {showAdminLogin && (
+          <AdminLogin 
+            onLogin={handleAdminLogin}
+            onClose={() => setShowAdminLogin(false)}
+          />
+        )}
+
+        {/* Member Auth Modal */}
+        {showMemberAuth && (
+          <MemberAuth 
+            onLogin={handleMemberLogin}
+            onClose={() => setShowMemberAuth(false)}
+            preselectedClass={preselectedClassForEnrollment}
+          />
+        )}
+      </>
+    );
   }
 
   return (
