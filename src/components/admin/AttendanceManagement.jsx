@@ -130,7 +130,7 @@ const AttendanceManagement = () => {
       <div className="bg-gray-900 rounded-2xl p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">Select Class</label>
+            <label className="block text-sm font-medium text-gray-300 mb-2">Select Workshop</label>
             <select
               value={selectedClass}
               onChange={(e) => setSelectedClass(parseInt(e.target.value))}

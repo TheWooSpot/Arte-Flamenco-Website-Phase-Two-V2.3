@@ -416,17 +416,17 @@ const MemberDashboard = ({ user, onLogout, onUserUpdate }) => {
         <h3 className="text-xl font-display font-bold text-flamenco-400 mb-6">Pay for Individual Classes</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-gray-800 rounded-xl p-6">
-            <h4 className="text-lg font-bold text-white mb-4">Single Class Pass</h4>
+            <h4 className="text-lg font-bold text-white mb-4">Single Workshop Pass</h4>
             <div className="text-2xl font-bold text-flamenco-400 mb-4">$35</div>
-            <p className="text-gray-300 text-sm mb-6">Access to any single class of your choice</p>
+            <p className="text-gray-300 text-sm mb-6">Access to any single workshop of your choice</p>
             <button className="w-full bg-flamenco-500 hover:bg-flamenco-600 text-black font-medium py-3 px-4 rounded-lg transition-colors">
               Purchase
             </button>
           </div>
           <div className="bg-gray-800 rounded-xl p-6">
-            <h4 className="text-lg font-bold text-white mb-4">5-Class Bundle</h4>
+            <h4 className="text-lg font-bold text-white mb-4">5-Workshop Bundle</h4>
             <div className="text-2xl font-bold text-flamenco-400 mb-4">$150</div>
-            <p className="text-gray-300 text-sm mb-6">Save $25 with this 5-class package</p>
+            <p className="text-gray-300 text-sm mb-6">Save $25 with this 5-workshop package</p>
             <button className="w-full bg-flamenco-500 hover:bg-flamenco-600 text-black font-medium py-3 px-4 rounded-lg transition-colors">
               Purchase
             </button>
@@ -445,7 +445,7 @@ const MemberDashboard = ({ user, onLogout, onUserUpdate }) => {
             </span>
           </div>
           <p className="text-gray-300 mb-4">
-            Invite a friend to join any class at 50% off the regular price. Perfect for sharing the joy of movement!
+            Invite a friend to join any workshop at 50% off the regular price. Perfect for sharing the joy of movement!
           </p>
           <div className="flex items-center gap-4 mb-6">
             <div>

@@ -304,7 +304,7 @@ const Shop = () => {
               Support Your Movement Journey
             </h2>
             <p className="text-xl text-black/80 mb-8 max-w-2xl mx-auto">
-              Every purchase supports our mission to make healing movement accessible to all. Join our community and invest in your wellness journey.
+              Every purchase supports our mission to make healing movement workshops accessible to all. Join our community and invest in your wellness journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors">

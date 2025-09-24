@@ -27,15 +27,15 @@ const Performances = () => {
   const performances = [
     {
       title: "Healing Through Movement",
-      date: "March 15, 2024",
+      date: "March 15, 2025",
       venue: "Community Arts Center",
-      description: "An evening showcasing the therapeutic power of dance, featuring students from our trauma-informed and somatic movement programs.",
+      description: "An evening showcasing the therapeutic power of dance, featuring participants from our trauma-informed and somatic movement workshops.",
       image: "https://images.pexels.com/photos/3662849/pexels-photo-3662849.jpeg",
       type: "Community Showcase"
     },
     {
       title: "Cultural Celebration Gala",
-      date: "April 20, 2024",
+      date: "April 20, 2025",
       venue: "Downtown Theater",
       description: "A vibrant celebration of global dance traditions featuring Afro-Caribbean rhythms, flamenco, and sacred world dance performances.",
       image: "https://images.pexels.com/photos/6173891/pexels-photo-6173891.jpeg",
@@ -43,17 +43,17 @@ const Performances = () => {
     },
     {
       title: "Adaptive Dance Showcase",
-      date: "May 10, 2024",
+      date: "May 10, 2025",
       venue: "Inclusive Arts Space",
-      description: "Celebrating the beauty and strength of our adaptive dance community, featuring chair-based dance and Parkinson's program participants.",
+      description: "Celebrating the beauty and strength of our adaptive dance community, featuring chair-based dance and Parkinson's workshop participants.",
       image: "https://images.pexels.com/photos/3662850/pexels-photo-3662850.jpeg",
       type: "Adaptive Showcase"
     },
     {
       title: "Contemporary Expressions",
-      date: "June 8, 2024",
+      date: "June 8, 2025",
       venue: "Modern Dance Theater",
-      description: "Student performances featuring contemporary, hip-hop therapy, and K-Pop dance styles in a celebration of modern movement.",
+      description: "Workshop participant performances featuring contemporary, hip-hop therapy, and K-Pop dance styles in a celebration of modern movement.",
       image: "https://images.pexels.com/photos/3662851/pexels-photo-3662851.jpeg",
       type: "Student Performance"
     }

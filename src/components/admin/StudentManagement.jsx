@@ -367,7 +367,7 @@ const AddStudentForm = ({ classes, onAdd, onCancel }) => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">Enroll in Classes</label>
+            <label className="block text-sm font-medium text-gray-300 mb-2">Enroll in Workshops</label>
             <div className="space-y-2">
               {classes.map((cls) => (
                 <label key={cls.id} className="flex items-center gap-3">

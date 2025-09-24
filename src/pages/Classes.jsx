@@ -820,7 +820,6 @@ const Classes = ({ memberUser, onShowMemberAuth, onPreselectedClass }) => {
                     </ul>
                   </div>
                   
-                  <button className={`w-full ${getCategoryColor(classItem.category)} hover:opacity-80 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300`}>
                   <button 
                     onClick={() => handleEnrollmentRequest(classItem.id)}
                     className={`w-full ${getCategoryColor(classItem.category)} hover:opacity-80 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300`}
@@ -839,7 +838,7 @@ const Classes = ({ memberUser, onShowMemberAuth, onPreselectedClass }) => {
 
           {filteredClasses.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-xl text-gray-400 mb-4">No classes match your current filters.</p>
+              <p className="text-xl text-gray-400 mb-4">No workshops match your current filters.</p>
               <button 
                 onClick={() => {
                   setActiveCategory('all');
@@ -865,10 +864,10 @@ const Classes = ({ memberUser, onShowMemberAuth, onPreselectedClass }) => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-black">
-              Find Your Perfect Movement Practice
+              Find Your Perfect Workshop Experience
             </h2>
             <p className="text-xl text-black/80 mb-8 max-w-2xl mx-auto">
-              Whether you're seeking healing, cultural connection, artistic expression, or pure joy—we have a class designed just for you. Every body is welcome here.
+              Whether you're seeking healing, cultural connection, artistic expression, or pure joy—we have a workshop designed just for you. Every body is welcome here.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors">

@@ -238,14 +238,14 @@ const Gallery = () => {
               Create Your Own Movement Story
             </h2>
             <p className="text-xl text-black/80 mb-8 max-w-2xl mx-auto">
-              Join our community and become part of the transformative journey. Every class, every movement, every moment is a step toward healing and empowerment.
+              Join our community and become part of the transformative journey. Every workshop, every movement, every moment is a step toward healing and empowerment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
                 Start Your Journey
               </button>
               <button className="border-2 border-black text-black px-8 py-4 rounded-lg font-semibold hover:bg-black hover:text-white transition-colors">
-                View Programs
+                View Workshops
               </button>
             </div>
           </motion.div>
