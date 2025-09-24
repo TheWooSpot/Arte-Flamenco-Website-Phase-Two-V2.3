@@ -8,7 +8,7 @@ const Classes = ({ memberUser, onShowMemberAuth, onPreselectedClass }) => {
   const [enrollmentRequests, setEnrollmentRequests] = useState([]);
 
   const categories = [
-    { id: 'all', name: 'All Classes', icon: '🌟', color: 'bg-flamenco-500' },
+    { id: 'all', name: 'All Workshops', icon: '🌟', color: 'bg-flamenco-500' },
     { id: 'therapeutic', name: 'Therapeutic & Somatic', icon: '🧘‍♀️', color: 'bg-emerald-500' },
     { id: 'adaptive', name: 'Adaptive & Healing', icon: '♿', color: 'bg-blue-500' },
     { id: 'cultural', name: 'Cultural & Empowering', icon: '💃', color: 'bg-purple-500' },

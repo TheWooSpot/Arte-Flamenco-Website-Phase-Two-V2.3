@@ -16,23 +16,23 @@ const Home = () => {
     },
     {
       id: 2,
-      quote: "As someone with Parkinson's, the adaptive dance program has given me back my confidence and joy in movement. The community here understands and celebrates every small victory.",
+      quote: "As someone with Parkinson's, the adaptive dance workshops have given me back my confidence and joy in movement. The community here understands and celebrates every small victory.",
       name: "Robert Martinez",
-      role: "Dance for Parkinson's Participant",
+      role: "Dance for Parkinson's Workshop Participant",
       image: "https://images.pexels.com/photos/3662845/pexels-photo-3662845.jpeg"
     },
     {
       id: 3,
-      quote: "The Afro-Caribbean healing rhythms class connected me to my ancestral roots while providing a powerful outlet for stress. It's therapy, culture, and celebration all in one.",
+      quote: "The Afro-Caribbean healing rhythms workshop connected me to my ancestral roots while providing a powerful outlet for stress. It's therapy, culture, and celebration all in one.",
       name: "Amara Johnson",
-      role: "Cultural Dance Student",
+      role: "Cultural Dance Workshop Participant",
       image: "https://images.pexels.com/photos/3662842/pexels-photo-3662842.jpeg"
     },
     {
       id: 4,
-      quote: "Through somatic movement exploration, I've learned to listen to my body's wisdom and release years of stored tension. This practice has transformed how I move through life.",
+      quote: "Through somatic movement exploration workshops, I've learned to listen to my body's wisdom and release years of stored tension. This practice has transformed how I move through life.",
       name: "Elena Rodriguez",
-      role: "Somatic Movement Student",
+      role: "Somatic Movement Workshop Participant",
       image: "https://images.pexels.com/photos/3662850/pexels-photo-3662850.jpeg"
     },
     {
@@ -48,15 +48,15 @@ const Home = () => {
     {
       id: 1,
       title: "Therapeutic & Somatic",
-      description: "Evidence-based movement therapy, trauma-informed dance, anxiety relief, and somatic exploration for healing and wellness.",
-      classCount: "8 Classes",
+      description: "Evidence-based movement therapy, trauma-informed dance, anxiety relief, and somatic exploration workshops for healing and wellness.",
+      classCount: "8 Workshops",
       image: "https://images.pexels.com/photos/3662848/pexels-photo-3662848.jpeg",
       color: "bg-emerald-500"
     },
     {
       id: 2,
       title: "Adaptive & Healing",
-      description: "Inclusive programs for diverse abilities including chair-based dance, Parkinson's support, and neurodiverse movement labs.",
+      description: "Inclusive workshops for diverse abilities including chair-based dance, Parkinson's support, and neurodiverse movement labs.",
       classCount: "4 Programs",
       image: "https://images.pexels.com/photos/6173891/pexels-photo-6173891.jpeg",
       color: "bg-blue-500"
@@ -64,16 +64,16 @@ const Home = () => {
     {
       id: 3,
       title: "Cultural & Empowering",
-      description: "Celebrate global traditions through Afro-Caribbean rhythms, sacred world dance, flamenco empowerment, and Latin fusion.",
-      classCount: "5 Styles",
+      description: "Celebrate global traditions through Afro-Caribbean rhythms, sacred world dance, flamenco empowerment, and Latin fusion workshops.",
+      classCount: "5 Workshop Styles",
       image: "https://images.pexels.com/photos/3662840/pexels-photo-3662840.jpeg",
       color: "bg-purple-500"
     },
     {
       id: 4,
       title: "Trending & Technique",
-      description: "Contemporary and classical techniques including hip-hop therapy, K-Pop, ballet, contemporary, salsa, and ecstatic dance.",
-      classCount: "9 Classes",
+      description: "Contemporary and classical technique workshops including hip-hop therapy, K-Pop, ballet, contemporary, salsa, and ecstatic dance.",
+      classCount: "9 Workshop Classes",
       image: "https://images.pexels.com/photos/3662832/pexels-photo-3662832.jpeg",
       color: "bg-orange-500"
     }
@@ -125,7 +125,7 @@ const Home = () => {
               to="/classes" 
               className="px-8 py-4 bg-flamenco-500 text-white rounded-full hover:bg-flamenco-600 transition-colors text-lg font-medium"
             >
-              Join Our Classes
+              Join Our Workshops
             </Link>
             <Link 
               to="/gallery" 
