@@ -53,7 +53,7 @@ const MemberAuth = ({ onLogin, onClose, preselectedClass }) => {
           lastName: formData.lastName,
           phone: formData.phone,
           memberStatus: 'Bronze',
-          joinDate: '2025-01-01',
+          joinDate: new Date().toISOString().split('T')[0],
           workshopsCompleted: 0,
           upcomingSessions: 0,
           hoursDanced: 0,

@@ -304,7 +304,7 @@ const Contact = () => {
                 Schedule Free Consultation
               </button>
               <button className="border-2 border-black text-black px-8 py-4 rounded-lg font-semibold hover:bg-black hover:text-white transition-colors">
-                View Workshop Schedule
+                View Class Schedule
               </button>
             </div>
           </motion.div>

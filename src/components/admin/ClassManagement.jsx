@@ -391,7 +391,7 @@ const AddClassForm = ({ onAdd, onCancel }) => {
               type="submit"
               className="flex-1 bg-flamenco-500 hover:bg-flamenco-600 text-black font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
             >
-              Add Workshop
+              Add Class
             </button>
             <button
               type="button"

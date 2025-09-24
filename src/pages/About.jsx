@@ -360,11 +360,11 @@ const About = () => {
               Join Clarita's Movement Revolution
             </h2>
             <p className="text-xl text-black/80 mb-8 max-w-2xl mx-auto">
-              Whether you're seeking healing, cultural connection, artistic expression, or pure joy—Clarita's transformative workshops await. Join our inclusive community where every body belongs and every story matters.
+              Whether you're seeking healing, cultural connection, artistic expression, or pure joy—Clarita's transformative programs await. Join our inclusive community where every body belongs and every story matters.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
-                Explore Our Workshops
+                Explore Our Programs
               </button>
               <button className="border-2 border-black text-black px-8 py-4 rounded-lg font-semibold hover:bg-black hover:text-white transition-colors">
                 Meet Clarita
